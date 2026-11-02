@@ -1,0 +1,19 @@
+{
+  "name": "task4-fallback-router",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Token-aware rate limiter and resilient model-fallback router for an LLM gateway.",
+  "engines": {
+    "node": ">=22.6"
+  },
+  "scripts": {
+    "start": "node src/server.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.6.0"
+  }
+}

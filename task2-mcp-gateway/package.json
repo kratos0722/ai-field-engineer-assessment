@@ -1,0 +1,20 @@
+{
+  "name": "task2-mcp-gateway",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "MCP security gateway proxy with method-level (admin_*) authorization.",
+  "engines": {
+    "node": ">=22.6"
+  },
+  "scripts": {
+    "start": "node src/gateway.ts",
+    "downstream": "node src/downstream.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.6.0"
+  }
+}

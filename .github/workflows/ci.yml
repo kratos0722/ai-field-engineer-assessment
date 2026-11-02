@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        task:
+          - task1-mcp-server
+          - task2-mcp-gateway
+          - task3-llm-guardrail
+          - task4-fallback-router
+    defaults:
+      run:
+        working-directory: ${{ matrix.task }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - run: npm install --no-audit --no-fund
+      - run: npm run typecheck
+      - run: npm test

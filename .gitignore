@@ -1,0 +1,13 @@
+node_modules/
+*.log
+
+# SQLite artifacts (Task 4)
+*.db
+*.db-wal
+*.db-shm
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

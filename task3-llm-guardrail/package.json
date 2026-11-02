@@ -1,0 +1,19 @@
+{
+  "name": "task3-llm-guardrail",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "LLM gateway streaming guardrail that redacts PII in real time.",
+  "engines": {
+    "node": ">=22.6"
+  },
+  "scripts": {
+    "start": "node src/gateway.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.6.0"
+  }
+}
